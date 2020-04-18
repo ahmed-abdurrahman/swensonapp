@@ -19,9 +19,16 @@ class AnagramCheckerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testIsAnagrams() {
+    func testIsEmptyStringsAnagrams() {
 
        XCTAssert(AnagramChecker.isAnagrams("", ""), "Empty strings are anagrams")
+    }
+
+    func testAnagrams() {
+
+        XCTAssert(AnagramChecker.isAnagrams("123", "123"), "Equal strings should be anagrams anagrams")
+
+        XCTAssert(AnagramChecker.isAnagrams("debit card", "bad credit"), "Equal strings should be anagrams anagrams")
     }
 
 }

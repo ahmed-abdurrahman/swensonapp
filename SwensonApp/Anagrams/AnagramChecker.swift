@@ -12,6 +12,9 @@ class AnagramChecker {
 
     static func isAnagrams(_ string1: String, _ string2: String) -> Bool {
 
-        return false
+        let sorted1 = string1.sorted()
+        let sorted2 = string2.sorted()
+
+        return sorted1 == sorted2
     }
 }
