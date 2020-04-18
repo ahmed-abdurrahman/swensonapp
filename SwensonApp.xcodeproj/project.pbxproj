@@ -18,6 +18,9 @@
 		E2DCEE9A244B24410092FFC0 /* AnagramChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEE99244B24410092FFC0 /* AnagramChecker.swift */; };
 		E2DCEE9B244B24410092FFC0 /* AnagramChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEE99244B24410092FFC0 /* AnagramChecker.swift */; };
 		E2DCEE9E244B24BC0092FFC0 /* AnagramCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEE9D244B24BC0092FFC0 /* AnagramCheckerTests.swift */; };
+		E2DCEEA1244B37B00092FFC0 /* FibonacciFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */; };
+		E2DCEEA2244B37B00092FFC0 /* FibonacciFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */; };
+		E2DCEEA5244B86600092FFC0 /* FibonacciFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEA4244B86600092FFC0 /* FibonacciFinderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,8 @@
 		E26510C1244B22CC00577F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2DCEE99244B24410092FFC0 /* AnagramChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramChecker.swift; sourceTree = "<group>"; };
 		E2DCEE9D244B24BC0092FFC0 /* AnagramCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramCheckerTests.swift; sourceTree = "<group>"; };
+		E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciFinder.swift; sourceTree = "<group>"; };
+		E2DCEEA4244B86600092FFC0 /* FibonacciFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciFinderTests.swift; sourceTree = "<group>"; };
 		F1B6FD278D7FB544FD01B1C8 /* Pods-SwensonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonAppTests.release.xcconfig"; path = "Target Support Files/Pods-SwensonAppTests/Pods-SwensonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDF842F7C51D44D0FE0C7272 /* Pods-SwensonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonApp.debug.xcconfig"; path = "Target Support Files/Pods-SwensonApp/Pods-SwensonApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +119,7 @@
 		E26510A7244B22CA00577F3C /* SwensonApp */ = {
 			isa = PBXGroup;
 			children = (
+				E2DCEE9F244B377A0092FFC0 /* Fibonacci */,
 				E2DCEE98244B240F0092FFC0 /* Anagrams */,
 				E26510A8244B22CA00577F3C /* AppDelegate.swift */,
 				E26510AA244B22CA00577F3C /* SceneDelegate.swift */,
@@ -129,6 +135,7 @@
 		E26510BE244B22CC00577F3C /* SwensonAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				E2DCEEA3244B863C0092FFC0 /* FibonacciFinderTests */,
 				E2DCEE9C244B244A0092FFC0 /* AnagramCheckerTests */,
 				E26510C1244B22CC00577F3C /* Info.plist */,
 			);
@@ -149,6 +156,22 @@
 				E2DCEE9D244B24BC0092FFC0 /* AnagramCheckerTests.swift */,
 			);
 			path = AnagramCheckerTests;
+			sourceTree = "<group>";
+		};
+		E2DCEE9F244B377A0092FFC0 /* Fibonacci */ = {
+			isa = PBXGroup;
+			children = (
+				E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */,
+			);
+			path = Fibonacci;
+			sourceTree = "<group>";
+		};
+		E2DCEEA3244B863C0092FFC0 /* FibonacciFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2DCEEA4244B86600092FFC0 /* FibonacciFinderTests.swift */,
+			);
+			path = FibonacciFinderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +345,7 @@
 				E26510AD244B22CA00577F3C /* ViewController.swift in Sources */,
 				E26510A9244B22CA00577F3C /* AppDelegate.swift in Sources */,
 				E26510AB244B22CA00577F3C /* SceneDelegate.swift in Sources */,
+				E2DCEEA1244B37B00092FFC0 /* FibonacciFinder.swift in Sources */,
 				E2DCEE9A244B24410092FFC0 /* AnagramChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +354,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DCEEA2244B37B00092FFC0 /* FibonacciFinder.swift in Sources */,
 				E2DCEE9E244B24BC0092FFC0 /* AnagramCheckerTests.swift in Sources */,
+				E2DCEEA5244B86600092FFC0 /* FibonacciFinderTests.swift in Sources */,
 				E2DCEE9B244B24410092FFC0 /* AnagramChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
