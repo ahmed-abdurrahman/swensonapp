@@ -26,9 +26,15 @@ class AnagramCheckerTests: XCTestCase {
 
     func testAnagrams() {
 
-        XCTAssert(AnagramChecker.isAnagrams("123", "123"), "Equal strings should be anagrams anagrams")
+        XCTAssert(AnagramChecker.isAnagrams("123", "123"), "Equal strings should be anagrams")
 
         XCTAssert(AnagramChecker.isAnagrams("debit card", "bad credit"), "Equal strings should be anagrams anagrams")
+
+        XCTAssert(AnagramChecker.isAnagrams("punishment", "nine thumps"), "Equal strings removing white spaces should be anagrams anagrams")
     }
 
+    func testIsNotAnagram() {
+
+        XCTAssertFalse(AnagramChecker.isAnagrams("123", "1234"), "None-equal strings shouldn't be anagrams")
+    }
 }
