@@ -19,4 +19,13 @@ class FibonacciFinderTests: XCTestCase {
         XCTAssertEqual(nZero, 0, "First Fibonacci number must equal 0")
         XCTAssertEqual(nOne, 1, "Second Fibonacci number must equal 1")
     }
+
+    func testRecursiveInitialsFibonacciValues() {
+
+        let nZero = FibonacciFinder.findNthFibonacciNumberRecursive(n: 0)
+        let nOne = FibonacciFinder.findNthFibonacciNumberRecursive(n: 1)
+
+        XCTAssertEqual(nZero, 0, "First Fibonacci number must equal 0")
+        XCTAssertEqual(nOne, 1, "Second Fibonacci number must equal 1")
+    }
 }

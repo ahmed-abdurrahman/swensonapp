@@ -12,10 +12,16 @@ class FibonacciFinder {
 
     static func findNthFibonacciNumberIterative(n: Int) -> Int {
 
+        guard n >= 0 else { return -1 }
+        guard n > 1 else { return n }
+
         return 0
     }
 
     static func findNthFibonacciNumberRecursive(n: Int) -> Int {
+
+        guard n >= 0 else { return -1 }
+        guard n > 1 else { return n }
 
         return 0
     }
