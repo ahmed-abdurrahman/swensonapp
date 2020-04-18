@@ -1,5 +1,5 @@
 //
-//  SwensonAppTests.swift
+//  AnagramCheckerTests.swift
 //  SwensonAppTests
 //
 //  Created by Ahmed Abdurrahman on 4/18/20.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import SwensonApp
 
-class SwensonAppTests: XCTestCase {
+class AnagramCheckerTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,16 +19,9 @@ class SwensonAppTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testIsAnagrams() {
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+       XCTAssert(AnagramChecker.isAnagrams("", ""), "Empty strings are anagrams")
     }
 
 }
