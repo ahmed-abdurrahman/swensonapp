@@ -15,7 +15,16 @@ class FibonacciFinder {
         guard n >= 0 else { return -1 }
         guard n > 1 else { return n }
 
-        return 0
+        var nMinus2 = 0
+        var nMinus1 = 1
+        for _ in 2..<n {
+
+            let newNMinus2 = nMinus1
+            nMinus1 = nMinus2 + nMinus1
+            nMinus2 = newNMinus2
+        }
+
+        return nMinus1 + nMinus2
     }
 
     static func findNthFibonacciNumberRecursive(n: Int) -> Int {
