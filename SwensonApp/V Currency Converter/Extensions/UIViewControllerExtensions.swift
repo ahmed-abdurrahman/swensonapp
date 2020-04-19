@@ -33,4 +33,20 @@ public extension UIViewController {
 
         return false
     }
+
+    func showError(
+        title: String = "Oops",
+        message: String = "Something went wrong, please try again later",
+        actionTitle: String = "Okay",
+        handler: (() -> Void)? = nil
+        ) {
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: UIAlertAction.Style.default) { _ in
+
+            handler?()
+        })
+
+        present(alert, animated: true, completion: nil)
+    }
 }

@@ -15,16 +15,19 @@ struct CurrenciesState {
 
         case loading
         case loaded
-        case failed(error: Error)
+        case failed(error: String)
     }
 
-    var currencies: [String: String]
+    var currencies: [String: String] = [:]
 }
 
 class CurrenciesViewModel: StatefulViewModel<CurrenciesState.Change> {
 
+    var state = CurrenciesState()
+
     func loadCurrencies() {
 
+        emit(change: .loading)
         APIClient.performRequest(
             route: .symbols
         ) { [weak self] (result: Result<SymbolsModel, Error>) in
@@ -32,10 +35,10 @@ class CurrenciesViewModel: StatefulViewModel<CurrenciesState.Change> {
                 guard let self = self else { return }
                 switch result {
                 case .success(let symbols):
-                    print(symbols)
+                    self.state.currencies = symbols.symbols ?? [:]
                     self.emit(change: .loaded)
                 case .failure(let error):
-                    self.emit(change: .failed(error: error))
+                    self.emit(change: .failed(error: error.localizedDescription))
                 }
         }
     }

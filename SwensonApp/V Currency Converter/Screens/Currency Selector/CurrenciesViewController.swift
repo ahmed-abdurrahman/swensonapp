@@ -1,39 +1,44 @@
 //
-//  LatestRatesViewController.swift
+//  CurrenciesViewController.swift
 //  SwensonApp
 //
 //  Created by Ahmed Abdurrahman on 4/19/20.
 //  Copyright © 2020 SwensonHe. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-struct LatestRatesPresentation: Presentation {
+import UIKit
 
-    var cellsPresentations: [RateCellPresentation] = []
-    var baseCurrency: String = ""
+protocol CurrenciesDelegate: class {
 
-    mutating func update(with state: LatestRatesState) {
+    func currenciesList(_ sender: CurrenciesViewController, didSelectBaseCurrency currency: String)
+}
 
-        baseCurrency = state.baseCurrency
-        cellsPresentations = state.rates.keys.sorted().map({
+struct CurrenciesPresentation: Presentation {
 
-            let rate = state.rates[$0] ?? 0.0
-            let formatted = String(format: "%.2f", rate)
-            return RateCellPresentation(currencyCode: $0, rate: formatted)
+    var cellsPresentations: [CurrencyCellPresentation] = []
+
+    mutating func update(with state: CurrenciesState) {
+
+        cellsPresentations = state.currencies.keys.sorted().map({
+
+            let country = state.currencies[$0] ?? ""
+            return CurrencyCellPresentation(country: country, currency: $0)
         })
     }
 }
 
-class LatestRatesViewController: UIViewController {
+class CurrenciesViewController: UIViewController, StoryboardBased {
 
-    @IBOutlet weak var baseCurrencyButton: UIButton!
+    static var storyboardName: String = "Main"
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    let viewModel = LatestRatesViewModel()
-    var presentation = LatestRatesPresentation() {
+    weak var delegate: CurrenciesDelegate?
+    let viewModel = CurrenciesViewModel()
+    var presentation = CurrenciesPresentation() {
         didSet {
             updateUI()
         }
@@ -44,12 +49,12 @@ class LatestRatesViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         addChangeHandlers()
-        viewModel.loadLatestRates()
+        viewModel.loadCurrencies()
     }
 
     private func configureTableView() {
 
-        tableView.register(RateTableViewCell.nib, forCellReuseIdentifier: "RateTableViewCell")
+        tableView.register(CurrencyTableViewCell.nib, forCellReuseIdentifier: "CurrencyTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -76,18 +81,12 @@ class LatestRatesViewController: UIViewController {
     private func updateUI() {
 
         tableView.reloadData()
-        baseCurrencyButton.setTitle(presentation.baseCurrency, for: .normal)
-    }
-
-    @IBAction func didTapBaseCurrency() {
-
-        AppRouter.routeToCurrenciesList(from: self, delegate: self)
     }
 }
 
 // MARK: - TableView Delegate & DataSource
 
-extension LatestRatesViewController: UITableViewDelegate, UITableViewDataSource {
+extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -96,22 +95,18 @@ extension LatestRatesViewController: UITableViewDelegate, UITableViewDataSource 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell: RateTableViewCell = tableView.dequeueReusableCell(withIdentifier: "RateTableViewCell") as! RateTableViewCell
+        let cell: CurrencyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CurrencyTableViewCell") as! CurrencyTableViewCell
 
         cell.presentation = presentation.cellsPresentations[indexPath.row]
         return cell
     }
-}
 
-// MARK: - CurrenciesDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-extension LatestRatesViewController: CurrenciesDelegate {
-
-    func currenciesList(
-        _ sender: CurrenciesViewController,
-        didSelectBaseCurrency currency: String) {
-
-        dismiss(animated: true)
-        viewModel.setBaseCurrency(currency)
+        DispatchQueue.main.async {
+            let currency = self.presentation.cellsPresentations[indexPath.row].currency
+            self.delegate?.currenciesList(self, didSelectBaseCurrency: currency)
+        }
     }
 }
+

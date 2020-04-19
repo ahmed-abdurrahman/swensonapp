@@ -10,7 +10,7 @@
         <!--Latest Rates View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LatestRatesViewController" customModule="SwensonApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LatestRatesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LatestRatesViewController" customModule="SwensonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="sgY-fr-p7D"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Loading..."/>
                                                 <connections>
                                                     <action selector="didTapBaseCurrency" destination="BYZ-38-t0r" eventType="touchUpInside" id="jeW-6S-91K"/>
                                                 </connections>
@@ -80,7 +80,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="71" y="129"/>
+        </scene>
+        <!--Currencies View Controller-->
+        <scene sceneID="IDb-eB-SFc">
+            <objects>
+                <viewController storyboardIdentifier="CurrenciesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8R7-U0-KGd" customClass="CurrenciesViewController" customModule="SwensonApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Vy-U9-c1H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H1e-i9-XUh">
+                                <rect key="frame" x="0.0" y="117.5" width="414" height="744.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="n1H-dP-bZo">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select base currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0e-rL-sz0">
+                                <rect key="frame" x="20" y="84" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="0.25634681739999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H1e-i9-XUh" firstAttribute="leading" secondItem="pKJ-Cp-Mk3" secondAttribute="leading" id="613-vd-7Tz"/>
+                            <constraint firstItem="n1H-dP-bZo" firstAttribute="centerY" secondItem="2Vy-U9-c1H" secondAttribute="centerY" id="UPM-PI-ICO"/>
+                            <constraint firstItem="H1e-i9-XUh" firstAttribute="trailing" secondItem="pKJ-Cp-Mk3" secondAttribute="trailing" id="dI1-Yq-wMY"/>
+                            <constraint firstItem="r0e-rL-sz0" firstAttribute="top" secondItem="pKJ-Cp-Mk3" secondAttribute="top" constant="40" id="hU3-cY-8eM"/>
+                            <constraint firstItem="n1H-dP-bZo" firstAttribute="centerX" secondItem="2Vy-U9-c1H" secondAttribute="centerX" id="hiw-yB-LMr"/>
+                            <constraint firstItem="r0e-rL-sz0" firstAttribute="leading" secondItem="pKJ-Cp-Mk3" secondAttribute="leading" constant="20" id="iyC-wC-KFu"/>
+                            <constraint firstItem="H1e-i9-XUh" firstAttribute="top" secondItem="r0e-rL-sz0" secondAttribute="bottom" constant="8" id="j8Z-O4-sOw"/>
+                            <constraint firstItem="H1e-i9-XUh" firstAttribute="bottom" secondItem="pKJ-Cp-Mk3" secondAttribute="bottom" id="sUv-j9-9iB"/>
+                            <constraint firstItem="pKJ-Cp-Mk3" firstAttribute="trailing" secondItem="r0e-rL-sz0" secondAttribute="trailing" constant="20" id="vTo-58-lpU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pKJ-Cp-Mk3"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="n1H-dP-bZo" id="gZy-Ea-qu1"/>
+                        <outlet property="tableView" destination="H1e-i9-XUh" id="nOo-P5-Jg3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCN-Ae-AsW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="128.57142857142856"/>
         </scene>
     </scenes>
 </document>

@@ -29,7 +29,9 @@ class APIClient {
         return AF.request(
             Constants.baseApiUrl + route.rawValue,
             parameters: parameters
-        ).responseDecodable(of: T.self) { response in
+        )
+            .validate(statusCode: 200..<300)
+            .responseDecodable(of: T.self) { response in
 
             if let error = response.error {
                 completion(.failure(error))

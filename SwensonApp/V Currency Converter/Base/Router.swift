@@ -42,11 +42,11 @@ extension Router {
         animated: Bool = true, completion: (() -> Void)? = nil
     ) {
 
-        if #available(iOS 13.0, *) {
-            controller.isModalInPresentation = true
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+//            controller.isModalInPresentation = true
+//        } else {
+//            // Fallback on earlier versions
+//        }
         context.present(controller, animated: animated, completion: completion)
     }
 }

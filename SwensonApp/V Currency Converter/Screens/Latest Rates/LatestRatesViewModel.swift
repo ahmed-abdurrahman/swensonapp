@@ -15,7 +15,7 @@ struct LatestRatesState {
 
         case loading
         case loaded
-        case failed(error: Error)
+        case failed(error: String)
     }
 
     var baseCurrency: String = "EUR"
@@ -25,6 +25,12 @@ struct LatestRatesState {
 class LatestRatesViewModel: StatefulViewModel<LatestRatesState.Change> {
 
     var state = LatestRatesState()
+
+    func setBaseCurrency(_ base: String) {
+
+        state.baseCurrency = base
+        loadLatestRates()
+    }
 
     func loadLatestRates() {
 
@@ -37,9 +43,13 @@ class LatestRatesViewModel: StatefulViewModel<LatestRatesState.Change> {
                 switch result {
                 case .success(let rates):
                     self.state.rates = rates.rates ?? [:]
+                    if self.state.rates.isEmpty {
+                        self.emit(change: .failed(error: "Something went wrong! Try again later"))
+                        return
+                    }
                     self.emit(change: .loaded)
                 case .failure(let error):
-                    self.emit(change: .failed(error: error))
+                    self.emit(change: .failed(error: error.localizedDescription))
                 }
         }
     }
