@@ -32,6 +32,6 @@ class FibonacciFinder {
         guard n >= 0 else { return -1 }
         guard n > 1 else { return n }
 
-        return 0
+        return findNthFibonacciNumberRecursive(n: n-1) + findNthFibonacciNumberRecursive(n: n-2)
     }
 }
