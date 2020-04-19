@@ -11,6 +11,8 @@ import XCTest
 
 class FibonacciFinderTests: XCTestCase {
 
+    // MARK: - Iterative Tests
+
     func testIterativeInitialsFibonacciValues() {
 
         let nZero = FibonacciFinder.findNthFibonacciNumberIterative(n: 0)
@@ -19,6 +21,17 @@ class FibonacciFinderTests: XCTestCase {
         XCTAssertEqual(nZero, 0, "First Fibonacci number must equal 0")
         XCTAssertEqual(nOne, 1, "Second Fibonacci number must equal 1")
     }
+
+    func testIterativeFibonacciValues() {
+
+        let nNine = FibonacciFinder.findNthFibonacciNumberIterative(n: 9)
+        let nFive = FibonacciFinder.findNthFibonacciNumberIterative(n: 5)
+
+        XCTAssertEqual(nNine, 34, "9th Fibonacci number must equal 34")
+        XCTAssertEqual(nFive, 5, "5th Fibonacci number must equal 5")
+    }
+
+    // MARK: - Recursive Tests
 
     func testRecursiveInitialsFibonacciValues() {
 
