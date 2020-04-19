@@ -21,6 +21,8 @@
 		E2DCEEA1244B37B00092FFC0 /* FibonacciFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */; };
 		E2DCEEA2244B37B00092FFC0 /* FibonacciFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */; };
 		E2DCEEA5244B86600092FFC0 /* FibonacciFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEA4244B86600092FFC0 /* FibonacciFinderTests.swift */; };
+		E2DCEEAB244C46380092FFC0 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEAA244C46380092FFC0 /* Arithmetic.swift */; };
+		E2DCEEAC244C46380092FFC0 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEAA244C46380092FFC0 /* Arithmetic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		E2DCEE9D244B24BC0092FFC0 /* AnagramCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramCheckerTests.swift; sourceTree = "<group>"; };
 		E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciFinder.swift; sourceTree = "<group>"; };
 		E2DCEEA4244B86600092FFC0 /* FibonacciFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciFinderTests.swift; sourceTree = "<group>"; };
+		E2DCEEAA244C46380092FFC0 /* Arithmetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
 		F1B6FD278D7FB544FD01B1C8 /* Pods-SwensonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonAppTests.release.xcconfig"; path = "Target Support Files/Pods-SwensonAppTests/Pods-SwensonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDF842F7C51D44D0FE0C7272 /* Pods-SwensonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonApp.debug.xcconfig"; path = "Target Support Files/Pods-SwensonApp/Pods-SwensonApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,15 +122,15 @@
 		E26510A7244B22CA00577F3C /* SwensonApp */ = {
 			isa = PBXGroup;
 			children = (
-				E2DCEE9F244B377A0092FFC0 /* Fibonacci */,
-				E2DCEE98244B240F0092FFC0 /* Anagrams */,
 				E26510A8244B22CA00577F3C /* AppDelegate.swift */,
 				E26510AA244B22CA00577F3C /* SceneDelegate.swift */,
+				E2DCEEA7244C45C20092FFC0 /* I Arithmetic */,
+				E2DCEE98244B240F0092FFC0 /* II Anagrams */,
+				E2DCEE9F244B377A0092FFC0 /* III Fibonacci */,
+				E2DCEEA8244C45EE0092FFC0 /* IV Architecture */,
+				E2DCEEA9244C46080092FFC0 /* V Currency Converter */,
+				E2DCEEA6244C45A60092FFC0 /* Resources */,
 				E26510AC244B22CA00577F3C /* ViewController.swift */,
-				E26510AE244B22CA00577F3C /* Main.storyboard */,
-				E26510B1244B22CC00577F3C /* Assets.xcassets */,
-				E26510B3244B22CC00577F3C /* LaunchScreen.storyboard */,
-				E26510B6244B22CC00577F3C /* Info.plist */,
 			);
 			path = SwensonApp;
 			sourceTree = "<group>";
@@ -142,12 +145,12 @@
 			path = SwensonAppTests;
 			sourceTree = "<group>";
 		};
-		E2DCEE98244B240F0092FFC0 /* Anagrams */ = {
+		E2DCEE98244B240F0092FFC0 /* II Anagrams */ = {
 			isa = PBXGroup;
 			children = (
 				E2DCEE99244B24410092FFC0 /* AnagramChecker.swift */,
 			);
-			path = Anagrams;
+			path = "II Anagrams";
 			sourceTree = "<group>";
 		};
 		E2DCEE9C244B244A0092FFC0 /* AnagramCheckerTests */ = {
@@ -158,12 +161,12 @@
 			path = AnagramCheckerTests;
 			sourceTree = "<group>";
 		};
-		E2DCEE9F244B377A0092FFC0 /* Fibonacci */ = {
+		E2DCEE9F244B377A0092FFC0 /* III Fibonacci */ = {
 			isa = PBXGroup;
 			children = (
 				E2DCEEA0244B37B00092FFC0 /* FibonacciFinder.swift */,
 			);
-			path = Fibonacci;
+			path = "III Fibonacci";
 			sourceTree = "<group>";
 		};
 		E2DCEEA3244B863C0092FFC0 /* FibonacciFinderTests */ = {
@@ -172,6 +175,39 @@
 				E2DCEEA4244B86600092FFC0 /* FibonacciFinderTests.swift */,
 			);
 			path = FibonacciFinderTests;
+			sourceTree = "<group>";
+		};
+		E2DCEEA6244C45A60092FFC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E26510AE244B22CA00577F3C /* Main.storyboard */,
+				E26510B1244B22CC00577F3C /* Assets.xcassets */,
+				E26510B3244B22CC00577F3C /* LaunchScreen.storyboard */,
+				E26510B6244B22CC00577F3C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2DCEEA7244C45C20092FFC0 /* I Arithmetic */ = {
+			isa = PBXGroup;
+			children = (
+				E2DCEEAA244C46380092FFC0 /* Arithmetic.swift */,
+			);
+			path = "I Arithmetic";
+			sourceTree = "<group>";
+		};
+		E2DCEEA8244C45EE0092FFC0 /* IV Architecture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "IV Architecture";
+			sourceTree = "<group>";
+		};
+		E2DCEEA9244C46080092FFC0 /* V Currency Converter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "V Currency Converter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +381,7 @@
 				E26510AD244B22CA00577F3C /* ViewController.swift in Sources */,
 				E26510A9244B22CA00577F3C /* AppDelegate.swift in Sources */,
 				E26510AB244B22CA00577F3C /* SceneDelegate.swift in Sources */,
+				E2DCEEAB244C46380092FFC0 /* Arithmetic.swift in Sources */,
 				E2DCEEA1244B37B00092FFC0 /* FibonacciFinder.swift in Sources */,
 				E2DCEE9A244B24410092FFC0 /* AnagramChecker.swift in Sources */,
 			);
@@ -354,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DCEEAC244C46380092FFC0 /* Arithmetic.swift in Sources */,
 				E2DCEEA2244B37B00092FFC0 /* FibonacciFinder.swift in Sources */,
 				E2DCEE9E244B24BC0092FFC0 /* AnagramCheckerTests.swift in Sources */,
 				E2DCEEA5244B86600092FFC0 /* FibonacciFinderTests.swift in Sources */,
