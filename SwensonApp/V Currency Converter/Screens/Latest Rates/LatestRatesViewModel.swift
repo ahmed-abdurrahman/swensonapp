@@ -36,7 +36,7 @@ class LatestRatesViewModel: StatefulViewModel<LatestRatesState.Change> {
                 guard let self = self else { return }
                 switch result {
                 case .success(let rates):
-                    print(rates)
+                    self.state.rates = rates.rates ?? [:]
                     self.emit(change: .loaded)
                 case .failure(let error):
                     self.emit(change: .failed(error: error))
