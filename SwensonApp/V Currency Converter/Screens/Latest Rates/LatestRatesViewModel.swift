@@ -15,7 +15,7 @@ struct LatestRatesState {
 
         case loading
         case loaded
-        case failed
+        case failed(error: Error)
     }
 
     var baseCurrency: String = "EUR"
@@ -29,20 +29,18 @@ class LatestRatesViewModel: StatefulViewModel<LatestRatesState.Change> {
     func loadLatestRates() {
 
         emit(change: .loading)
-        let params: [String: Any] = [
-            "access_key": "52a0e68207a79a986118dfb96e73d1b9"
-        ]
-        AF.request("http://data.fixer.io/api/latest",
-                   parameters: params)
-            .responseDecodable(of: LatestRatesModel.self) { [weak self] response in
+        APIClient.performRequest(
+            route: .latest,
+            params: ["base": state.baseCurrency]) { [weak self] (result: Result<LatestRatesModel, Error>) in
 
-            guard let self = self,
-                let rates = response.value?.rates else {
-                return
-            }
-
-            self.state.rates = rates
-            self.emit(change: .loaded)
+                guard let self = self else { return }
+                switch result {
+                case .success(let rates):
+                    print(rates)
+                    self.emit(change: .loaded)
+                case .failure(let error):
+                    self.emit(change: .failed(error: error))
+                }
         }
     }
 }

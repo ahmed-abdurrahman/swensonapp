@@ -35,6 +35,8 @@
 		E2DCEECA244C75D20092FFC0 /* NibLoadale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEC9244C75D20092FFC0 /* NibLoadale.swift */; };
 		E2DCEECC244C76170092FFC0 /* BundleDefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEECB244C76170092FFC0 /* BundleDefinable.swift */; };
 		E2DCEECE244C79CC0092FFC0 /* LatestRatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEECD244C79CC0092FFC0 /* LatestRatesModel.swift */; };
+		E2DCEED0244C7F7A0092FFC0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEECF244C7F7A0092FFC0 /* APIClient.swift */; };
+		E2DCEED2244C85CD0092FFC0 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEED1244C85CD0092FFC0 /* APIRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		E2DCEEC9244C75D20092FFC0 /* NibLoadale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadale.swift; sourceTree = "<group>"; };
 		E2DCEECB244C76170092FFC0 /* BundleDefinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDefinable.swift; sourceTree = "<group>"; };
 		E2DCEECD244C79CC0092FFC0 /* LatestRatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesModel.swift; sourceTree = "<group>"; };
+		E2DCEECF244C7F7A0092FFC0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E2DCEED1244C85CD0092FFC0 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		F1B6FD278D7FB544FD01B1C8 /* Pods-SwensonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonAppTests.release.xcconfig"; path = "Target Support Files/Pods-SwensonAppTests/Pods-SwensonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDF842F7C51D44D0FE0C7272 /* Pods-SwensonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonApp.debug.xcconfig"; path = "Target Support Files/Pods-SwensonApp/Pods-SwensonApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,6 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				E2DCEEBE244C72ED0092FFC0 /* Models */,
+				E2DCEECF244C7F7A0092FFC0 /* APIClient.swift */,
+				E2DCEED1244C85CD0092FFC0 /* APIRoute.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 				E26510A9244B22CA00577F3C /* AppDelegate.swift in Sources */,
 				E2DCEEB6244C714D0092FFC0 /* Presentation.swift in Sources */,
 				E2DCEEC0244C730E0092FFC0 /* LatestRatesViewModel.swift in Sources */,
+				E2DCEED0244C7F7A0092FFC0 /* APIClient.swift in Sources */,
 				E26510AB244B22CA00577F3C /* SceneDelegate.swift in Sources */,
 				E2DCEEB4244C70DC0092FFC0 /* UIViewControllerExtensions.swift in Sources */,
 				E2DCEEAF244C6FD70092FFC0 /* BaseViewModel.swift in Sources */,
@@ -491,6 +498,7 @@
 				E2DCEEAB244C46380092FFC0 /* Arithmetic.swift in Sources */,
 				E2DCEEC2244C732D0092FFC0 /* CurrenciesViewModel.swift in Sources */,
 				E2DCEEC8244C75AE0092FFC0 /* Reusable.swift in Sources */,
+				E2DCEED2244C85CD0092FFC0 /* APIRoute.swift in Sources */,
 				E2DCEEA1244B37B00092FFC0 /* FibonacciFinder.swift in Sources */,
 				E2DCEEC6244C75930092FFC0 /* StoryboardBased.swift in Sources */,
 				E2DCEECA244C75D20092FFC0 /* NibLoadale.swift in Sources */,

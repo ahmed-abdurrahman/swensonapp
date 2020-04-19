@@ -15,7 +15,7 @@ struct CurrenciesState {
 
         case loading
         case loaded
-        case failed
+        case failed(error: Error)
     }
 
     var currencies: [String: String]
@@ -25,19 +25,18 @@ class CurrenciesViewModel: StatefulViewModel<CurrenciesState.Change> {
 
     func loadCurrencies() {
 
-        let params: [String: Any] = [
-            "access_key": "52a0e68207a79a986118dfb96e73d1b9"
-        ]
-        AF.request("http://data.fixer.io/api/symbols", parameters: params).responseDecodable(of: SymbolsModel.self) { response in
+        APIClient.performRequest(
+            route: .symbols
+        ) { [weak self] (result: Result<SymbolsModel, Error>) in
 
-            guard let symbols = response.value else {
-                return
-            }
-
-            symbols.symbols?.forEach({
-                print($0)
-                print($1)
-            })
+                guard let self = self else { return }
+                switch result {
+                case .success(let symbols):
+                    print(symbols)
+                    self.emit(change: .loaded)
+                case .failure(let error):
+                    self.emit(change: .failed(error: error))
+                }
         }
     }
 }
