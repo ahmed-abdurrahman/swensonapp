@@ -11,7 +11,6 @@
 		95F795BBD5D50082318B8CD1 /* Pods_SwensonApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CB6A3097D1A3259E139222 /* Pods_SwensonApp.framework */; };
 		E26510A9244B22CA00577F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26510A8244B22CA00577F3C /* AppDelegate.swift */; };
 		E26510AB244B22CA00577F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26510AA244B22CA00577F3C /* SceneDelegate.swift */; };
-		E26510AD244B22CA00577F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26510AC244B22CA00577F3C /* ViewController.swift */; };
 		E26510B0244B22CA00577F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26510AE244B22CA00577F3C /* Main.storyboard */; };
 		E26510B2244B22CC00577F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26510B1244B22CC00577F3C /* Assets.xcassets */; };
 		E26510B5244B22CC00577F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26510B3244B22CC00577F3C /* LaunchScreen.storyboard */; };
@@ -30,6 +29,12 @@
 		E2DCEEBD244C72DA0092FFC0 /* SymbolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEBC244C72DA0092FFC0 /* SymbolsModel.swift */; };
 		E2DCEEC0244C730E0092FFC0 /* LatestRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEBF244C730E0092FFC0 /* LatestRatesViewModel.swift */; };
 		E2DCEEC2244C732D0092FFC0 /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEC1244C732D0092FFC0 /* CurrenciesViewModel.swift */; };
+		E2DCEEC4244C74380092FFC0 /* LatestRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEC3244C74380092FFC0 /* LatestRatesViewController.swift */; };
+		E2DCEEC6244C75930092FFC0 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEC5244C75930092FFC0 /* StoryboardBased.swift */; };
+		E2DCEEC8244C75AE0092FFC0 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEC7244C75AE0092FFC0 /* Reusable.swift */; };
+		E2DCEECA244C75D20092FFC0 /* NibLoadale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEC9244C75D20092FFC0 /* NibLoadale.swift */; };
+		E2DCEECC244C76170092FFC0 /* BundleDefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEECB244C76170092FFC0 /* BundleDefinable.swift */; };
+		E2DCEECE244C79CC0092FFC0 /* LatestRatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEECD244C79CC0092FFC0 /* LatestRatesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +55,6 @@
 		E26510A5244B22CA00577F3C /* SwensonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwensonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26510A8244B22CA00577F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26510AA244B22CA00577F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E26510AC244B22CA00577F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E26510AF244B22CA00577F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E26510B1244B22CC00577F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E26510B4244B22CC00577F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,12 @@
 		E2DCEEBC244C72DA0092FFC0 /* SymbolsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsModel.swift; sourceTree = "<group>"; };
 		E2DCEEBF244C730E0092FFC0 /* LatestRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesViewModel.swift; sourceTree = "<group>"; };
 		E2DCEEC1244C732D0092FFC0 /* CurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewModel.swift; sourceTree = "<group>"; };
+		E2DCEEC3244C74380092FFC0 /* LatestRatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesViewController.swift; sourceTree = "<group>"; };
+		E2DCEEC5244C75930092FFC0 /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
+		E2DCEEC7244C75AE0092FFC0 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		E2DCEEC9244C75D20092FFC0 /* NibLoadale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadale.swift; sourceTree = "<group>"; };
+		E2DCEECB244C76170092FFC0 /* BundleDefinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDefinable.swift; sourceTree = "<group>"; };
+		E2DCEECD244C79CC0092FFC0 /* LatestRatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesModel.swift; sourceTree = "<group>"; };
 		F1B6FD278D7FB544FD01B1C8 /* Pods-SwensonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonAppTests.release.xcconfig"; path = "Target Support Files/Pods-SwensonAppTests/Pods-SwensonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDF842F7C51D44D0FE0C7272 /* Pods-SwensonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonApp.debug.xcconfig"; path = "Target Support Files/Pods-SwensonApp/Pods-SwensonApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +154,6 @@
 				E2DCEEA8244C45EE0092FFC0 /* IV Architecture */,
 				E2DCEEA9244C46080092FFC0 /* V Currency Converter */,
 				E2DCEEA6244C45A60092FFC0 /* Resources */,
-				E26510AC244B22CA00577F3C /* ViewController.swift */,
 				E26510B6244B22CC00577F3C /* Info.plist */,
 			);
 			path = SwensonApp;
@@ -234,6 +243,10 @@
 				E2DCEEAE244C6FD70092FFC0 /* BaseViewModel.swift */,
 				E2DCEEB0244C6FED0092FFC0 /* Router.swift */,
 				E2DCEEB5244C714D0092FFC0 /* Presentation.swift */,
+				E2DCEEC5244C75930092FFC0 /* StoryboardBased.swift */,
+				E2DCEEC7244C75AE0092FFC0 /* Reusable.swift */,
+				E2DCEEC9244C75D20092FFC0 /* NibLoadale.swift */,
+				E2DCEECB244C76170092FFC0 /* BundleDefinable.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -259,6 +272,7 @@
 		E2DCEEB8244C72330092FFC0 /* Latest Rates */ = {
 			isa = PBXGroup;
 			children = (
+				E2DCEEC3244C74380092FFC0 /* LatestRatesViewController.swift */,
 				E2DCEEBF244C730E0092FFC0 /* LatestRatesViewModel.swift */,
 			);
 			path = "Latest Rates";
@@ -291,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				E2DCEEBC244C72DA0092FFC0 /* SymbolsModel.swift */,
+				E2DCEECD244C79CC0092FFC0 /* LatestRatesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -465,16 +480,21 @@
 			files = (
 				E2DCEEB1244C6FED0092FFC0 /* Router.swift in Sources */,
 				E2DCEEBD244C72DA0092FFC0 /* SymbolsModel.swift in Sources */,
-				E26510AD244B22CA00577F3C /* ViewController.swift in Sources */,
+				E2DCEECC244C76170092FFC0 /* BundleDefinable.swift in Sources */,
 				E26510A9244B22CA00577F3C /* AppDelegate.swift in Sources */,
 				E2DCEEB6244C714D0092FFC0 /* Presentation.swift in Sources */,
 				E2DCEEC0244C730E0092FFC0 /* LatestRatesViewModel.swift in Sources */,
 				E26510AB244B22CA00577F3C /* SceneDelegate.swift in Sources */,
 				E2DCEEB4244C70DC0092FFC0 /* UIViewControllerExtensions.swift in Sources */,
 				E2DCEEAF244C6FD70092FFC0 /* BaseViewModel.swift in Sources */,
+				E2DCEEC4244C74380092FFC0 /* LatestRatesViewController.swift in Sources */,
 				E2DCEEAB244C46380092FFC0 /* Arithmetic.swift in Sources */,
 				E2DCEEC2244C732D0092FFC0 /* CurrenciesViewModel.swift in Sources */,
+				E2DCEEC8244C75AE0092FFC0 /* Reusable.swift in Sources */,
 				E2DCEEA1244B37B00092FFC0 /* FibonacciFinder.swift in Sources */,
+				E2DCEEC6244C75930092FFC0 /* StoryboardBased.swift in Sources */,
+				E2DCEECA244C75D20092FFC0 /* NibLoadale.swift in Sources */,
+				E2DCEECE244C79CC0092FFC0 /* LatestRatesModel.swift in Sources */,
 				E2DCEE9A244B24410092FFC0 /* AnagramChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

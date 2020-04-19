@@ -1,0 +1,30 @@
+//
+//  StoryboardBased.swift
+//  SwensonApp
+//
+//  Created by Ahmed Abdurrahman on 4/19/20.
+//  Copyright © 2020 SwensonHe. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+/// Protocol to conform to be instantiated from storyboard
+/// Warning: Storyboard identifier must be same as the reuse identifier!
+public protocol StoryboardBased: Reusable {
+
+    static var storyboardName: String { get }
+}
+
+public extension StoryboardBased {
+
+    static func instantiate() -> Self {
+
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: reuseIdentifier) as? Self else {
+            fatalError(reuseIdentifier + " cannot be instantiated via storyboard")
+        }
+
+        return viewController
+    }
+}
