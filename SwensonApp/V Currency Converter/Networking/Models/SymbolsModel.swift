@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct SymbolsModel: Codable {
+struct SymbolsModel: BaseModel {
 
     var symbols: [String: String]?
+    var error: ErrorModel?
 }

@@ -20,7 +20,7 @@ class APIClient {
     }
 
     @discardableResult
-    static func performRequest<T: Decodable>(
+    static func performRequest<T: BaseModel>(
         route: APIRoute,
         params: [String: String] = [:],
         completion: @escaping (Result<T, Error>)->Void) -> DataRequest {
@@ -31,6 +31,9 @@ class APIClient {
             parameters: parameters
         )
             .validate(statusCode: 200..<300)
+            .responseJSON(completionHandler: { (json) in
+                debugPrint(json)
+            })
             .responseDecodable(of: T.self) { response in
 
             if let error = response.error {
@@ -38,7 +41,12 @@ class APIClient {
                 return
             }
             if let result = response.value {
-                completion(.success(result))
+                if let businessError = result.error {
+                    let error = NSError(domain: "business", code: businessError.code ?? 0, userInfo: [NSLocalizedDescriptionKey: businessError.info ?? "Restricted access"])
+                    completion(.failure(error))
+                } else {
+                    completion(.success(result))
+                }
             }
         }
     }

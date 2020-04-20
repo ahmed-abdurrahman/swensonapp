@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct LatestRatesModel: Codable {
+struct LatestRatesModel: BaseModel {
 
     var base: String?
     var date: String?
     var rates: [String: Double]?
+    var error: ErrorModel?
 }
 

@@ -12,4 +12,5 @@ enum APIRoute: String {
 
     case latest
     case symbols
+    case convert
 }

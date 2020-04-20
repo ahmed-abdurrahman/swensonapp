@@ -66,9 +66,9 @@ class LatestRatesViewController: UIViewController {
             case .loaded:
                 self.activityIndicator.stopAnimating()
                 self.presentation.update(with: self.viewModel.state)
-            case .failed:
+            case .failed(let error):
                 self.activityIndicator.stopAnimating()
-                self.showError()
+                self.showError(message: error)
             }
         }
     }
@@ -100,6 +100,21 @@ extension LatestRatesViewController: UITableViewDelegate, UITableViewDataSource 
 
         cell.presentation = presentation.cellsPresentations[indexPath.row]
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        DispatchQueue.main.async {
+
+            let fromCurrency = self.viewModel.state.baseCurrency
+            let toCurrency = self.presentation.cellsPresentations[indexPath.row].currencyCode
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            AppRouter.routeToConverter(
+                from: self,
+                fromCurrency: fromCurrency,
+                toCurrency: toCurrency
+            )
+        }
     }
 }
 
