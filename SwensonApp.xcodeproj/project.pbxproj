@@ -51,6 +51,7 @@
 		E2DCEEEC244D93D80092FFC0 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEEB244D93D80092FFC0 /* ErrorModel.swift */; };
 		E2DCEEEE244D94930092FFC0 /* ConversionResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEED244D94930092FFC0 /* ConversionResultModel.swift */; };
 		E2DCEEF0244D95880092FFC0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEEF244D95880092FFC0 /* BaseModel.swift */; };
+		E2DCEEF2244D9BE20092FFC0 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEF1244D9BE20092FFC0 /* DateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		E2DCEEEB244D93D80092FFC0 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		E2DCEEED244D94930092FFC0 /* ConversionResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResultModel.swift; sourceTree = "<group>"; };
 		E2DCEEEF244D95880092FFC0 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E2DCEEF1244D9BE20092FFC0 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		F1B6FD278D7FB544FD01B1C8 /* Pods-SwensonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonAppTests.release.xcconfig"; path = "Target Support Files/Pods-SwensonAppTests/Pods-SwensonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDF842F7C51D44D0FE0C7272 /* Pods-SwensonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonApp.debug.xcconfig"; path = "Target Support Files/Pods-SwensonApp/Pods-SwensonApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,6 +291,7 @@
 			children = (
 				E2DCEEB3244C70DC0092FFC0 /* UIViewControllerExtensions.swift */,
 				E2DCEEE9244CF7C70092FFC0 /* UITextFieldExtensions.swift */,
+				E2DCEEF1244D9BE20092FFC0 /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				E2DCEEE4244CE77C0092FFC0 /* ConverterViewModel.swift in Sources */,
 				E2DCEED9244CCF5D0092FFC0 /* CurrenciesViewController.swift in Sources */,
 				E2DCEEEE244D94930092FFC0 /* ConversionResultModel.swift in Sources */,
+				E2DCEEF2244D9BE20092FFC0 /* DateExtensions.swift in Sources */,
 				E2DCEEBD244C72DA0092FFC0 /* SymbolsModel.swift in Sources */,
 				E2DCEECC244C76170092FFC0 /* BundleDefinable.swift in Sources */,
 				E26510A9244B22CA00577F3C /* AppDelegate.swift in Sources */,

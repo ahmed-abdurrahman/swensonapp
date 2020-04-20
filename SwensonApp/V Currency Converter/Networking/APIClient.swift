@@ -21,13 +21,13 @@ class APIClient {
 
     @discardableResult
     static func performRequest<T: BaseModel>(
-        route: APIRoute,
+        route: String,
         params: [String: String] = [:],
         completion: @escaping (Result<T, Error>)->Void) -> DataRequest {
 
         let parameters = params.merging(Constants.defaultParameters){(current,_) in current}
         return AF.request(
-            Constants.baseApiUrl + route.rawValue,
+            Constants.baseApiUrl + route,
             parameters: parameters
         )
             .validate(statusCode: 200..<300)
@@ -49,5 +49,14 @@ class APIClient {
                 }
             }
         }
+    }
+
+    @discardableResult
+    static func performRequest<T: BaseModel>(
+        route: APIRoute,
+        params: [String: String] = [:],
+        completion: @escaping (Result<T, Error>)->Void) -> DataRequest {
+
+        performRequest(route: route.rawValue, params: params, completion: completion)
     }
 }
