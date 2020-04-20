@@ -52,6 +52,8 @@
 		E2DCEEEE244D94930092FFC0 /* ConversionResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEED244D94930092FFC0 /* ConversionResultModel.swift */; };
 		E2DCEEF0244D95880092FFC0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEEF244D95880092FFC0 /* BaseModel.swift */; };
 		E2DCEEF2244D9BE20092FFC0 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEF1244D9BE20092FFC0 /* DateExtensions.swift */; };
+		E2DCEEF4244DC18D0092FFC0 /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCEEF3244DC18D0092FFC0 /* Architecture.swift */; };
+		E2DCEEF6244DC26D0092FFC0 /* Architecture Overview.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DCEEF5244DC26D0092FFC0 /* Architecture Overview.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		E2DCEEED244D94930092FFC0 /* ConversionResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResultModel.swift; sourceTree = "<group>"; };
 		E2DCEEEF244D95880092FFC0 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E2DCEEF1244D9BE20092FFC0 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		E2DCEEF3244DC18D0092FFC0 /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
+		E2DCEEF5244DC26D0092FFC0 /* Architecture Overview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Architecture Overview.png"; sourceTree = "<group>"; };
 		F1B6FD278D7FB544FD01B1C8 /* Pods-SwensonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonAppTests.release.xcconfig"; path = "Target Support Files/Pods-SwensonAppTests/Pods-SwensonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDF842F7C51D44D0FE0C7272 /* Pods-SwensonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwensonApp.debug.xcconfig"; path = "Target Support Files/Pods-SwensonApp/Pods-SwensonApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -256,6 +260,8 @@
 		E2DCEEA8244C45EE0092FFC0 /* IV Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				E2DCEEF3244DC18D0092FFC0 /* Architecture.swift */,
+				E2DCEEF5244DC26D0092FFC0 /* Architecture Overview.png */,
 			);
 			path = "IV Architecture";
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 			files = (
 				E26510B5244B22CC00577F3C /* LaunchScreen.storyboard in Resources */,
 				E2DCEEDE244CD4510092FFC0 /* CurrencyTableViewCell.xib in Resources */,
+				E2DCEEF6244DC26D0092FFC0 /* Architecture Overview.png in Resources */,
 				E2DCEED5244CBC920092FFC0 /* RateTableViewCell.xib in Resources */,
 				E26510B2244B22CC00577F3C /* Assets.xcassets in Resources */,
 				E26510B0244B22CA00577F3C /* Main.storyboard in Resources */,
@@ -571,6 +578,7 @@
 				E2DCEEC8244C75AE0092FFC0 /* Reusable.swift in Sources */,
 				E2DCEED2244C85CD0092FFC0 /* APIRoute.swift in Sources */,
 				E2DCEEF0244D95880092FFC0 /* BaseModel.swift in Sources */,
+				E2DCEEF4244DC18D0092FFC0 /* Architecture.swift in Sources */,
 				E2DCEEA1244B37B00092FFC0 /* FibonacciFinder.swift in Sources */,
 				E2DCEEE2244CD83A0092FFC0 /* AppRouter.swift in Sources */,
 				E2DCEEC6244C75930092FFC0 /* StoryboardBased.swift in Sources */,
