@@ -52,6 +52,7 @@ class LatestRatesViewController: UIViewController {
         tableView.register(RateTableViewCell.nib, forCellReuseIdentifier: "RateTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 80.0
     }
 
     private func addChangeHandlers() {

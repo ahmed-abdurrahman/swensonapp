@@ -57,6 +57,7 @@ class CurrenciesViewController: UIViewController, StoryboardBased {
         tableView.register(CurrencyTableViewCell.nib, forCellReuseIdentifier: "CurrencyTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 80.0
     }
 
     private func addChangeHandlers() {

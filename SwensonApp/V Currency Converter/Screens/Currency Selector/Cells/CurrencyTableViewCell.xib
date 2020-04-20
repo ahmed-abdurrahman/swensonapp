@@ -23,22 +23,32 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="lYD-wi-3oI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="560-Ga-aLq" userLabel="Country Label">
                                 <rect key="frame" x="65" y="0.0" width="338" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7v-1W-cfp">
+                        <rect key="frame" x="20" y="83" width="423" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="cuP-RL-ZuI"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="nfx-sq-Hen" secondAttribute="trailing" constant="20" id="31C-Tp-rfR"/>
+                    <constraint firstAttribute="bottom" secondItem="c7v-1W-cfp" secondAttribute="bottom" id="5ul-4D-1SU"/>
+                    <constraint firstAttribute="trailing" secondItem="c7v-1W-cfp" secondAttribute="trailing" id="EOd-Ei-zXv"/>
                     <constraint firstItem="nfx-sq-Hen" firstAttribute="centerY" secondItem="zki-Vh-Vag" secondAttribute="centerY" id="NCs-hk-jwF"/>
+                    <constraint firstItem="c7v-1W-cfp" firstAttribute="leading" secondItem="zki-Vh-Vag" secondAttribute="leading" constant="20" id="Yvs-vn-xcQ"/>
                     <constraint firstItem="nfx-sq-Hen" firstAttribute="leading" secondItem="zki-Vh-Vag" secondAttribute="leading" constant="20" id="iqO-fD-s3f"/>
                 </constraints>
             </tableViewCellContentView>

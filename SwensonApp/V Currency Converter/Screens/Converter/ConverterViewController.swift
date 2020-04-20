@@ -32,7 +32,9 @@ class ConverterViewController: UIViewController, StoryboardBased {
     @IBOutlet weak var fromAmountField: UITextField! {
         didSet {
             fromAmountField?.addDoneCancelToolbar(
-                onDone: (target: self, action: #selector(convertAmount)))
+                onDone: (target: self, action: #selector(convertAmount)),
+                doneTitle: "CONVERT"
+            )
         }
     }
     @IBOutlet weak var toAmountField: UITextField!

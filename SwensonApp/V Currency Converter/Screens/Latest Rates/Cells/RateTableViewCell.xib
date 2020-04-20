@@ -15,21 +15,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="443" height="84"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gB-kG-DIa">
+                        <rect key="frame" x="12" y="83" width="418" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1f0-Pz-kYI"/>
+                        </constraints>
+                    </view>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-sq-Hen">
-                        <rect key="frame" x="20" y="27.5" width="403" height="29"/>
+                        <rect key="frame" x="20" y="30" width="403" height="24"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPF-le-rGL">
-                                <rect key="frame" x="0.0" y="0.0" width="298" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="298" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.25634681739999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="560-Ga-aLq">
-                                <rect key="frame" x="303" y="0.0" width="100" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="560-Ga-aLq">
+                                <rect key="frame" x="303" y="0.0" width="100" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="xEg-9E-T4z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -38,8 +45,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="nfx-sq-Hen" secondAttribute="trailing" constant="20" id="31C-Tp-rfR"/>
+                    <constraint firstAttribute="bottom" secondItem="0gB-kG-DIa" secondAttribute="bottom" id="FQC-30-VYY"/>
                     <constraint firstItem="nfx-sq-Hen" firstAttribute="centerY" secondItem="zki-Vh-Vag" secondAttribute="centerY" id="NCs-hk-jwF"/>
                     <constraint firstItem="nfx-sq-Hen" firstAttribute="leading" secondItem="zki-Vh-Vag" secondAttribute="leading" constant="20" id="iqO-fD-s3f"/>
+                    <constraint firstAttribute="trailing" secondItem="0gB-kG-DIa" secondAttribute="trailing" constant="13" id="kzA-e3-Uk1"/>
+                    <constraint firstItem="0gB-kG-DIa" firstAttribute="leading" secondItem="zki-Vh-Vag" secondAttribute="leading" constant="12" id="xlx-rH-CXc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
